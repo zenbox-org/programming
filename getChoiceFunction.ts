@@ -1,9 +1,8 @@
 import { impl } from 'libs/utils/todo'
-import { ProgrammingProject } from './createProgrammingProject'
 import { Func } from './models/Func'
 
-export async function getChoiceFunction(project: ProgrammingProject): Promise<Func> {
-  const typeName = await getTypeName(project)
+export async function getChoiceFunction(): Promise<Func> {
+  const typeName = await getTypeName()
   const functionName = `get${typeName}`
   throw impl(`
   * Solve all type-related problems
@@ -11,6 +10,6 @@ export async function getChoiceFunction(project: ProgrammingProject): Promise<Fu
   `)
 }
 
-async function getTypeName(project: ProgrammingProject) {
+async function getTypeName() {
   throw impl()
 }
