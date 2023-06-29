@@ -7,7 +7,9 @@ import { Url, UrlSchema } from '../../generic/models/Url'
 export interface Language {
   url: Url
   hasHygienicMacros: boolean | null
-  isMemorySafe: boolean // Replace with "hasGarbageCollector"?
+  hasGoodIDESupport?: boolean
+  hasGarbageCollector?: boolean
+  isMemorySafe: boolean
   notes?: string
   transpiledTo: Language[]
 }
@@ -17,6 +19,8 @@ export type LanguageOptional = Optional<Language, 'transpiledTo'>
 export const LanguageSchema: z.ZodSchema<Language> = z.lazy(() => z.object({
   url: UrlSchema,
   hasHygienicMacros: z.boolean().nullable(),
+  hasGoodIDESupport: z.boolean().optional(),
+  hasGarbageCollector: z.boolean().optional(),
   isMemorySafe: z.boolean(),
   notes: NotesSchema,
   transpiledTo: LanguagesSchema,

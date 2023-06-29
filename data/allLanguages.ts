@@ -18,12 +18,16 @@ export const addLanguageD = mapLanguageD(addLanguage)
 export const JavaScript = addLanguageD({
   url: 'https://en.wikipedia.org/wiki/JavaScript',
   hasHygienicMacros: false,
+  hasGoodIDESupport: true,
+  hasGarbageCollector: true,
   isMemorySafe: true,
 })
 
 export const TypeScript = addLanguageD({
   url: 'https://en.wikipedia.org/wiki/TypeScript',
   hasHygienicMacros: false,
+  hasGoodIDESupport: true,
+  hasGarbageCollector: true,
   isMemorySafe: true,
 })
 
@@ -36,6 +40,8 @@ export const Python = addLanguageD({
 export const Rust = addLanguageD({
   url: 'https://en.wikipedia.org/wiki/Rust_(programming_language)',
   hasHygienicMacros: true,
+  hasGoodIDESupport: true,
+  hasGarbageCollector: false,
   isMemorySafe: true,
   notes: `
     * "Just clone everything when you are starting out to get around the borrow checker."
