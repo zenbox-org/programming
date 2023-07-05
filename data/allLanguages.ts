@@ -160,6 +160,12 @@ export const Racket = addLanguageD({
   `,
 })
 
+export const PureScript = addLanguageD({
+  url: 'https://www.purescript.org/',
+  hasHygienicMacros: false,
+  isMemorySafe: true,
+})
+
 export const Dafny = addLanguageD({
   url: 'https://github.com/dafny-lang/dafny',
   hasHygienicMacros: false,
