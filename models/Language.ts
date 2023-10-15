@@ -3,6 +3,7 @@ import { Optional } from 'ts-toolbelt/out/Object/Optional'
 import { z } from 'zod'
 import { NotesSchema } from '../../generic/models/Notes'
 import { Url, UrlSchema } from '../../generic/models/Url'
+import { isEqualByDC } from '../../utils/lodash'
 
 export interface Language {
   url: Url
@@ -46,3 +47,5 @@ export function validateLanguages(languages: Language[]): Language[] {
 export function getLanguageUid(languageUid: LanguageUid) {
   return LanguageUidSchema.parse(languageUid)
 }
+
+export const isEqualLanguage = isEqualByDC(getLanguageUid)
