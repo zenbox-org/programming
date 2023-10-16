@@ -114,6 +114,15 @@ export const Julia = addLanguageD({
   `,
 })
 
+export const Elixir = addLanguageD({
+  url: 'https://elixir-lang.org/',
+  hasHygienicMacros: true,
+  isMemorySafe: true,
+  notes: `
+    * Has [LiveView](https://hexdocs.pm/phoenix_live_view/welcome.html)
+  `,
+})
+
 export const HVM = addLanguageD({
   url: 'https://github.com/Kindelia/HVM',
   hasHygienicMacros: false,
