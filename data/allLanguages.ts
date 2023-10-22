@@ -1,5 +1,6 @@
 import { getFinder, getInserter } from 'libs/utils/zod'
-import { Mapper } from '../../generic/models/Mapper'
+import { Mapper } from '../../utils/Mapper'
+
 import { getLanguageUid, Language, LanguageOptional, LanguageSchema } from '../models/Language'
 
 export const allLanguages: Language[] = []

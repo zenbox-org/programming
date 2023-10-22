@@ -1,5 +1,5 @@
 import { State } from '../../../fairpool/formulas/models/State'
-import { Filter } from '../../../generic/models/Filter'
+import { Filter } from '../../../utils/Filter'
 
 export interface Requirement<T> {
   length: number // how long should the slice be

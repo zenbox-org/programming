@@ -1,8 +1,8 @@
 import { uniqBy } from 'remeda'
-import { Filter } from '../../../generic/models/Filter'
-import { Mapper } from '../../../generic/models/Mapper'
+import { Filter } from '../../../utils/Filter'
 import { Comparator } from '../../../utils/comparator'
 import { isEqualByDC } from '../../../utils/lodash'
+import { Mapper } from '../../../utils/Mapper'
 import { over } from '../../../utils/remeda/over'
 import { System } from '../System'
 
