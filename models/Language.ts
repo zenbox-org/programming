@@ -8,10 +8,10 @@ import { isEqualByDC } from '../../utils/lodash'
 export interface Language {
   url: Url
   hasHygienicMacros: boolean | null
-  hasGoodIDESupport?: boolean
-  hasGarbageCollector?: boolean
+  hasGoodIDESupport?: boolean | undefined
+  hasGarbageCollector?: boolean | undefined
   isMemorySafe: boolean
-  notes?: string
+  notes?: string | undefined
   transpiledTo: Language[]
 }
 
